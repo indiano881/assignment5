@@ -1,6 +1,10 @@
 :root {
     --background-image-standard: linear-gradient(#6d64ff, #f8a4d8);
     --background-image-reverse: linear-gradient(#f8a4d8, #6d64ff);
+
+    --spacing-small: 8px;
+    --spacing-medium: 16px;
+    --spacing-large: 32px;
 }
 
 * {
@@ -41,6 +45,16 @@ nav {
     border: 1px solid black;
     position: sticky;
     top: 0
+}
+
+nav ul {
+    list-style-type: none;
+    display: none;
+}
+
+nav ul.submenu {
+    display: none;
+    flex-direction: column;
 }
 
 
