@@ -1,8 +1,7 @@
 :root {
-    
+    --background-image-standard: linear-gradient(#6d64ff, #f8a4d8);
+    --background-image-reverse: linear-gradient(#f8a4d8, #6d64ff);
 }
-
-
 
 * {
     box-sizing: border-box;
@@ -20,25 +19,9 @@ body {
 }
 
 header {
-    background-image: linear-gradient(#6d64ff, #f8a4d8);
+    background-image: var(--background-image-standard);
     position: relative;
     text-align: center;   
-}
-
-.logo-page-title {
-    align-items: center;
-    display: grid;
-    grid-template: 1fr / 0.3fr  1.2fr;
-    text-align: center;
-}
-
-.LIA-logo {
-    background-color: gainsboro;
-    border-radius: 50%;
-    height: auto;
-    justify-content: right;
-    margin-left: 5%;
-    max-width: 100px;
 }
 
 h1{
@@ -54,47 +37,15 @@ h1{
 }
 
 nav {
-    background-color: #131a26;
+    background-color: #fff;
     border: 1px solid black;
     position: sticky;
     top: 0
 }
 
-nav .horizontal-menu {
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 1rem;
-    justify-content: space-evenly;
-}
-
-nav .horizontal-menu a{
-    background-image: linear-gradient(#6d64ff, #f8a4d8);
-    border: 1px solid black;
-    border-radius: 10px;
-    font-weight: bold;
-    margin: 0.3rem;
-    min-width: 100px;
-    padding: 0.3rem;
-    transition: all linear 0.4s;
-    text-align: center;
-    text-decoration: none;  
-}
-
-nav .horizontal-menu a:hover {
-    background-image: linear-gradient(#f8a4d8, #6d64ff);
-    color: #fff;
-}
-
-nav .horizontal-menu .marker {
-    box-shadow: 0px 5px 10px 10px white;
-}
-    
-.index-main-content{
-    font-size: calc( 1rem + 0.5vw); 
-}
 
 section{
-    background-image: linear-gradient(#6d64ff, #f8a4d8);
+    background-image: var(--background-image-standard);
     flex-grow: 1;
     text-align: center;
 }
@@ -107,29 +58,3 @@ section{
     font-size: 1rem;
 }
 
-@media screen and (min-width: 768px) {
-
-    .logo-page-title {
-    display: grid;
-    grid-template: 1fr / 1fr 2fr;
-    align-items: center;
-    text-align: left;
-    }
-
-    .LIA-logo {
-        max-width: 120px;
-    }
-    
-    nav .horizontal-menu {
-        font-size: calc( 1rem + 1vw);
-    }
-    
-    nav .horizontal-menu a{
-        min-width: 130px;
-    }
-
-    footer {
-        max-height: 95px;
-        font-size: calc( 1rem + 1vw);
-    }
-}
