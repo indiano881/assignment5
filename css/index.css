@@ -52,9 +52,10 @@ nav ul {
     display: none;
 }
 
-nav ul.submenu {
+.hamburger-menu ul.submenu {
     display: none;
     flex-direction: column;
+    padding: var(--spacing-small)
 }
 
 
