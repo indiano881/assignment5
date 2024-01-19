@@ -9,7 +9,7 @@ $("ul li").on({
         $(event.target).siblings().find(".submenu").hide("active");
     }
 })
-//hamburger 2nd level
+//hamburger 2nd level-works
 $(".submenu li").on("click", event => $(event.target).next("ul").toggle());
 $(".submenu li").on({
     "click": event=> {
@@ -17,7 +17,14 @@ $(".submenu li").on({
         $(event.target).siblings().find(".submenu-2").hide("active");
     }
 })
-
+//hamburger menu 3 level
+$(".submenu-2 li").on("click", event => $(event.target).next("ul").toggle());
+$(".submenu-2 li").on({
+    "click": event=> {
+        $(event.target).find(".submenu-3").toggle("active");
+        $(event.target).siblings().find(".submenu-3").hide("active");
+    }
+})
 
 
 
