@@ -1,5 +1,5 @@
 $(()=>{
-//Hamburger menu 1st level
+//Hamburger menu 1st level/wokrks
 $("nav .hamburger-menu").on("click", event => $(event.target).next("ul").toggle());
 $("ul li").on({
     "mouseenter": event => $(event.target).toggleClass("active"),
@@ -9,7 +9,14 @@ $("ul li").on({
         $(event.target).siblings().find(".submenu").hide("active");
     }
 })
-
+//hamburger 2nd level
+$("ul li").on("click", event => $(event.target).next("ul").toggle());
+$("ul li").on({
+    "click": event=> {
+        $(event.target).find(".submenu-2").toggle("active");
+        $(event.target).siblings().find(".submenu-2").hide("active");
+    }
+})
 
 
 
